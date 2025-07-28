@@ -1,3 +1,3 @@
-Java Script 
-Practice
+JAVA SCRIPT
+PRACTICE
 25/07/24~
