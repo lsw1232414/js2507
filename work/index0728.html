@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result">결과</p>
+    <script>
+        // 선언부
+        let name = "Kim";
+        let classRoom = 204;
+        let spring = "봄"
+        let summer = "여름"
+        let fall = "가을"
+        let winter = "겨울"
+        let season = ["봄", "여름", "가을", "겨울"]
+        let result
+        let result1
+        let result2
+        let result3
+
+        // 구현부
+        result = "이름:" + name + ", 반:" + classRoom;
+        result1 = "3월은 " + spring + ",8월은" + summer + ",10월은" + fall + ",1월은" + winter + "이다."
+        result2 = "3월은 " + season[0] + ",8월은" + season[1] + ",10월은" + season[2] + ",1월은" + season[3] + "이다."
+        result3 = `${spring}은 따뜻해 ! ${summer}은 뜨거워 ${fall}은 시원해 ${winter}은 추워`
+        // 출력부
+        console.log(result);
+        console.log(`이름: ${name} 반: ${classRoom}`)
+        document.getElementById("result").innerHTML = result
+        console.log(result1)
+        console.log(result2)
+        console.log(result3)
+    </script>
+    <div>
+        <p id="result5"></p>
+        <p id="result6"></p>
+        <p id="result7"></p>
+        <p id="result8"></p>
+        <p id="result9"></p>
+        <p id="result10"></p>
+        <p id="result11"></p>
+        <p id="result12"></p>
+        <p id="result13"></p>
+    </div>
+    <script src="./js/index0728.js"></script>
+</body>
+
+</html>
