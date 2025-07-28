@@ -1,0 +1,105 @@
+body {
+  background: linear-gradient(135deg, #eef2f3, #d2e1ec);
+  color: #333;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: black;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 50px;
+  color: black;
+}
+
+.weekday-header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.week-section {
+  margin-bottom: 50px;
+}
+
+.week-label {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.hw {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  min-height: 80px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.25s ease;
+}
+
+.hw:hover {
+  box-shadow: 10px 10px 10px gray
+}
+
+.hw-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.hw-title .day {
+  font-size: 18px;
+  display: block;
+  font-weight: 600;
+  color: black;
+}
+
+.hw-title .date {
+  display: block;
+  font-size: 14px;
+  color: gray;
+}
+
+
+.hw a {
+  font-size: 17px;
+  color: rgb(75, 75, 224);
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: transform 0.2s
+}
+
+.hw a:hover {
+  transform: scale(1.15);
+
+}
+
+.hw.empty {
+  background: #f4f4f4;
+  border: 1px dashed #ccc;
+  box-shadow: none;
+  pointer-events: none;
+  height: 100px;
+}
