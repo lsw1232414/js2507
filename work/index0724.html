@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>통합 자바스크립트 테스트</title>
+</head>
+<body>
+  <h1>자바스크립트 통합 테스트</h1>
+
+  <!-- index1.html -->
+  <section>
+    <h2>자바스크립트 함수</h2>
+    <p id="demo">테스트</p>
+    <button type="button" onclick="myfun()">함수를 실행해보자</button>
+  </section>
+
+  <!-- index3.html -->
+  <section>
+    <h2>계절 출력 (콘솔 확인)</h2>
+    <p>계절 출력은 console에서 확인하세요.</p>
+  </section>
+
+  <!-- index4.html -->
+  <section>
+    <h2>형변환 테스트 (콘솔 확인)</h2>
+    <p>형변환 결과는 console에서 확인하세요.</p>
+  </section>
+
+  <script>
+    // index1.html
+    function myfun(){
+      document.getElementById("demo").innerHTML = '<p style="color: red; font-weight: bold;">클릭클릭</p>';
+    }
+  </script>
+
+  <script>
+    // index3.html
+    let spring = "봄";
+    let summer = "여름";
+    let fall = "가을";
+    let winter = "겨울";
+    let season =["봄", "여름","가을","겨울"];
+
+    console.log(`${spring} --- ${summer} --- ${fall} --- ${winter}`);
+    console.log(`${season[0]}---${season[1]}---${season[2]}---${season[3]}`);
+  </script>
+
+  <script>
+    // index4.html
+    console.log(Number('123'))
+    console.log(Number('123ABC'))
+    console.log("------------------")
+    console.log(parseInt('123'))
+    console.log(parseInt('123.45'))
+    console.log(parseInt('123ABC'))
+    console.log("------------------")
+    console.log(parseFloat('123'))
+    console.log(parseFloat('123.45'))
+    console.log(parseFloat('123ABC'))
+    console.log("------------------")
+    console.log(String(123))
+    console.log(typeof String(123))
+    console.log(String(true))
+    console.log("------------------")
+    console.log(Boolean(1))
+    console.log(Boolean(0))
+    console.log(Boolean('ABC'))
+    console.log(Boolean(''))
+  </script>
+
+  <script>
+    // index3.JS (오타 수정 포함)
+    const PI = 3.14;
+
+    let radius = 0;
+    let area = 0;
+
+    area = PI * radius * radius;
+    console.log("원의 넓이:", area);
+  </script>
+</body>
+</html>

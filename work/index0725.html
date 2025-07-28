@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>통합 자바스크립트 테스트</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      color: #333;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: 산술/증감 연산 -->
+  <section>
+    <h2>산술 및 증감 연산 결과</h2>
+    <p id="result1"></p>
+  </section>
+
+  <!-- Section 2: 대입/복합 대입 연산 -->
+  <section>
+    <h2>대입 연산 결과 (Console 확인)</h2>
+    <p>F12 → 콘솔에서 출력 결과를 확인하세요.</p>
+  </section>
+
+  <!-- Script: index.js -->
+  <script>
+    var r = document.getElementById("result1");
+    let num1 = 8;
+    let num2 = 3;
+    let result = 0;
+
+    result = num1 + num2;
+    console.log(`[더하기 +] ${result}`);
+    r.innerHTML += `<h3>[더하기 +] ${result}</h3>`;
+
+    result = num1 - num2;
+    console.log(`[빼기 -] ${result}`);
+    r.innerHTML += `<h3>[빼기 -] ${result}</h3>`;
+
+    result = num1 * num2;
+    console.log(`[곱셈 *] ${result}`);
+    r.innerHTML += `<h3>[곱셈 *] ${result}</h3>`;
+
+    result = num1 / num2;
+    console.log(`[나눗셈 /] ${result}`);
+    r.innerHTML += `<h3>[나눗셈 /] ${result}</h3>`;
+    r.innerHTML += `<h3>[나눗셈.toFixed(3) /] ${result.toFixed(3)}</h3>`;
+
+    result = num1 % num2;
+    console.log(`[나머지 %] ${result}`);
+    r.innerHTML += `<h3>[나머지 %] ${result}</h3>`;
+
+    result = ++num1;
+    console.log(`[++ 증가] ${result}`);
+    r.innerHTML += `<h3>[++ 증가] ${result}</h3>`;
+
+    result = --num2;
+    console.log(`[-- 감소] ${result}`);
+    r.innerHTML += `<h3>[-- 감소] ${result}</h3>`;
+
+    let num0 = 7;
+    result = num0++;
+    console.log(`[후행 증가] ${result}`);
+    r.innerHTML += `<h3>[후행 증가] ${result}</h3>`;
+
+    let num00 = 7;
+    result = num00--;
+    console.log(`[후행 감소] ${result}`);
+    r.innerHTML += `<h3>[후행 감소] ${result}</h3>`;
+  </script>
+
+  <!-- Script: index2.js -->
+  <script>
+    let result2 = 0;
+    let numA = 5;
+
+    result2 = numA;
+    console.log(`[= 대입] ${result2}`);
+
+    result2 += numA;
+    console.log(`[+= 누적 대입] ${result2}`);
+
+    result2 -= numA;
+    console.log(`[-= 누적 대입] ${result2}`);
+
+    result2 *= numA;
+    console.log(`[*= 누적 대입] ${result2}`);
+
+    result2 /= numA;
+    console.log(`[/= 누적 대입] ${result2}`);
+
+    result2 %= numA;
+    console.log(`[%= 누적 대입] ${result2}`);
+  </script>
+
+</body>
+</html>
