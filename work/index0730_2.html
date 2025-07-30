@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>출결 체크</title>
+</head>
+<body>
+  <h1>출결 시스템</h1>
+  <button id="btnIn">출근</button>
+  <button id="btnOut">퇴근</button>
+  <div id="log"></div>
+
+  <script>
+    let log = document.getElementById("log");
+    let btnIn = document.getElementById("btnIn");
+    let btnOut = document.getElementById("btnOut");
+
+    btnIn.onclick = () => {
+      let now = new Date();
+      let hour = now.getHours();
+      let minute = now.getMinutes();
+      let greeting = "";
+
+      if(hour <= 9){
+        greeting = "🟢출근";
+      } else {
+        greeting = "🔴지각";
+      }
+
+      log.innerHTML += `<p> ${hour}시 ${minute}분 출근 - ${greeting}</p>`;
+    };
+
+    btnOut.onclick = () => {
+      let now = new Date();
+      let hour = now.getHours();
+      let minute = now.getMinutes();
+      let message = "";
+
+      if(hour < 18){
+        message = "🔴조퇴";
+      } else {
+        message = "🟢퇴근";
+      }
+
+      log.innerHTML += `<p> ${hour}시 ${minute}분 퇴근 - ${message}</p>`;
+    };
+  </script>
+</body>
+</html>
