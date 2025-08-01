@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>JavaScript 예제 모음</title>
-<style>
+  <meta charset="UTF-8" />
+  <title>JavaScript 예제 모음</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 20px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
     }
     button {
-        padding: 10px 20px;
-        margin: 5px;
-        font-size: 16px;
-        cursor: pointer;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
     }
-</style>
+    #output {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      min-height: 200px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid black;
+      padding: 5px 10px;
+    }
+    .times {
+      margin: 10px;
+      color: darkblue;
+    }
+  </style>
 </head>
 <body>
 
 <h1>JavaScript 예제 선택</h1>
 
-<button onclick="index1()">index1 실행</button>
-<button onclick="index2()">index2 실행</button>
-<button onclick="index3()">index3 실행</button>
-<button onclick="index4()">index4 실행</button>
-<button onclick="index5()">index5 실행</button>
-<button onclick="index6()">index6 실행</button>
-<button onclick="index7()">index7 실행</button>
-<button onclick="index8()">index8 실행</button>
-<button onclick="index9()">index9 실행</button>
+<!-- 버튼 목록 -->
+<div>
+  <button onclick="index1()">index1 실행</button>
+  <button onclick="index2()">index2 실행</button>
+  <button onclick="index3()">index3 실행</button>
+  <button onclick="index4()">index4 실행</button>
+  <button onclick="index5()">index5 실행</button>
+  <button onclick="index6()">index6 실행</button>
+  <button onclick="index7()">index7 실행</button>
+  <button onclick="index8()">index8 실행</button>
+  <button onclick="index9()">index9 실행</button>
+</div>
+
+<!-- 출력 영역 -->
+<div id="output"></div>
 
 <script src="./js/index0731.js"></script>
 </body>

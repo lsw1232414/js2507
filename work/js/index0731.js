@@ -1,4 +1,10 @@
+function clearOutput() {
+    const output = document.getElementById('output');
+    output.innerHTML = "";
+}
+
 function index1() {
+    clearOutput();
     let userNumber = prompt("숫자를 입력하시오");
     if (userNumber === null) {
         alert('입력취소');
@@ -10,6 +16,7 @@ function index1() {
 }
 
 function index2() {
+    clearOutput();
     let userNumber = prompt("숫자를 입력하세요");
     if (userNumber === "") {
         alert("공백이 입력되었습니다");
@@ -23,87 +30,112 @@ function index2() {
 }
 
 function index3() {
+    clearOutput();
     let myNumber = "test";
-    if(!isNaN(myNumber)){
-        alert("유효한 숫자");
-    }else{
-        alert("숫자가 아닙니다");
+    const output = document.getElementById('output');
+    if (!isNaN(myNumber)) {
+        output.textContent = "유효한 숫자";
+    } else {
+        output.textContent = "숫자가 아닙니다";
     }
 }
 
 function index4() {
+    clearOutput();
     let numberOne = parseInt(prompt("50미만의 숫자를 입력하세요"));
     let numberTwo = parseInt(prompt("50미만인 숫자를 입력하세요"));
-    if(isNaN(numberOne) || isNaN(numberTwo)){
-        alert("숫자가 아닙니다");
-    }else{
-        if(numberOne < 50 && numberTwo < 50)
-            alert("2개의 숫자모두  50미만");
+    const output = document.getElementById('output');
+    if (isNaN(numberOne) || isNaN(numberTwo)) {
+        output.textContent = "숫자가 아닙니다";
+    } else {
+        if (numberOne < 50 && numberTwo < 50)
+            output.textContent = "2개의 숫자 모두 50미만";
         else
-            alert("조건에 맞지 않는 숫자");
+            output.textContent = "조건에 맞지 않는 숫자";
     }
 }
 
 function index5() {
+    clearOutput();
     let session = prompt("관심 세션을 선택해주세요. 1-마케팅, 2-개발, 3-디자인");
+    const output = document.getElementById('output');
     switch (session) {
-        case "1": document.write("<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다. </p>");
+        case "1":
+            output.innerHTML = "<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.</p>";
             break;
-        case "2": document.write("<p>개발 세션은 <strong>203호</strong>에서 진행됩니다. </p>");
+        case "2":
+            output.innerHTML = "<p>개발 세션은 <strong>203호</strong>에서 진행됩니다.</p>";
             break;
-        case "3": document.write("<p>디자인 세션은 <strong>205호</strong>에서 진행됩니다. </p>");
+        case "3":
+            output.innerHTML = "<p>디자인 세션은 <strong>205호</strong>에서 진행됩니다.</p>";
             break;
-        default : alert("잘못된 입력");
+        default:
+            alert("잘못된 입력");
     }
 }
 
 function index6() {
-    document.write("<style>body{text-align: center; border: 1px solid black; width: 300px; margin:auto;}</style>");
-    for(let i=1; i<= 9; i++){
-        document.writeln(`${i}단 <br>`);
-        document.writeln(`--------------------------<br>`);
-        for(let j = 1; j <= 9; j++){
-            document.writeln(`${i} X ${j}= ${i*j}<br>`);
+    clearOutput();
+    const output = document.getElementById('output');
+    let html = "<div style='text-align: center;'>";
+    for (let i = 1; i <= 9; i++) {
+        html += `<strong>${i}단</strong><br>--------------------------<br>`;
+        for (let j = 1; j <= 9; j++) {
+            html += `${i} × ${j} = ${i * j}<br>`;
         }
-        document.writeln(`<br>`);
+        html += `<br>`;
     }
+    html += "</div>";
+    output.innerHTML = html;
 }
 
 function index7() {
+    clearOutput();
+    const output = document.getElementById('output');
     let stars = 5;
-    do{
-        document.writeln(`*`);
+    let result = "";
+    do {
+        result += "*";
         stars--;
-    }while(stars>0);
+    } while (stars > 0);
+    output.textContent = result;
 }
 
 function index8() {
-    for(let i= 2; i<10 ;i++){
-        if(i==4) continue;
-        document.writeln(`<div class="times">`);
-        document.writeln(`<h3>${i}단</h3>`);
-        document.writeln(`</div>`);
+    clearOutput();
+    const output = document.getElementById('output');
+    let html = "";
+    for (let i = 2; i < 10; i++) {
+        if (i == 4) continue;
+        html += `<div class="times"><h3>${i}단</h3></div>`;
     }
+    output.innerHTML = html;
 }
 
 function index9() {
-    let memNum = parseInt(prompt("입장객은 몇 명인가요?"));  
-    let colNum = parseInt(prompt("한 줄에 몇 명씩 앉습니까?"));  
-    let seat, rowNum;
-    if (memNum % colNum === 0) {  
-        rowNum = memNum / colNum;
-    } else {
-        rowNum = parseInt(memNum / colNum) + 1;
+    clearOutput();
+    const output = document.getElementById('output');
+    let memNum = parseInt(prompt("입장객은 몇 명인가요?"));
+    let colNum = parseInt(prompt("한 줄에 몇 명씩 앉습니까?"));
+
+    if (isNaN(memNum) || isNaN(colNum) || colNum === 0) {
+        output.textContent = "올바른 숫자를 입력하세요.";
+        return;
     }
-    document.writeln('<table>');
+
+    let rowNum = Math.ceil(memNum / colNum);
+    let table = "<table>";
+
     for (let i = 0; i < rowNum; i++) {
-        document.writeln('<tr>');
+        table += "<tr>";
         for (let j = 1; j <= colNum; j++) {
-            seat = i * colNum + j;
+            let seat = i * colNum + j;
             if (seat > memNum) break;
-            document.writeln(`<td> 좌석 ${seat} </td>`);
+            table += `<td>좌석 ${seat}</td>`;
         }
-        document.writeln('</tr>');
+        table += "</tr>";
     }
-    document.writeln('</table>');
+
+    table += "</table>";
+    output.innerHTML = table;
 }
