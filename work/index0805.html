@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DOM 객체_Forms, event, eventListener, node 예제</title>
+    <style>
+        section {
+            border: 1px solid #999;
+            padding: 12px;
+            margin: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. DOM 객체 Forms 연습 -->
+    <section>
+        <h2>1. DOM 객체_Forms 연습 (숫자만 입력받아보기))</h2>
+        <form name="numForm" onsubmit="return validateNumForm()">
+            숫자 입력: <input type="text" name="numInput">
+            <input type="submit" value="제출">
+        </form>
+        <p id="numResult"></p>
+    </section>
+
+
+    <!-- 2. event 연습 -->
+    <section>
+        <h2>2. event 연습(버튼클릭이벤트)</h2>
+        <button id="eventBtn">클릭</button>
+    </section>
+
+    <!-- 3. eventListener 연습 -->
+    <section>
+        <h2>3. eventListener 연습(마우스 오버)</h2>
+        <button id="listenerBtn">마우스를 올려주세요.</button>
+        <p id="listenerText">마우스를 인식중입니다.</p>
+    </section>
+
+    <!-- 4. node 연습 -->
+    <section>
+        <h2>4. node 연습(항목추가)</h2>
+        <ul id="nodeList">
+            <li>항목#1 </li>
+            <li>항목#2 </li>
+        </ul>
+        <button id="addNodeBtn">항목 추가</button>
+    </section>
+
+    <script src="./js/index0805.js"></script>
+</body>
+
+</html>

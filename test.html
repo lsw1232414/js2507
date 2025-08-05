@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">첫</p>
+        <p id="p2">두</p>
+    </div>
+
+    <script>
+        const myP = document.createElement("p");
+        const mytxt = document.createTextNode("세번째")
+        const myAttr = document.createAttribute
+        myP.appendChild(mytxt)
+        
+        let div1 = document.getElementById("div1");
+        div1.appendChild(myP);
+
+    </script>
+</body>
+
+</html>
