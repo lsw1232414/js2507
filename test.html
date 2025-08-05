@@ -14,11 +14,18 @@
     </div>
 
     <script>
+        //요소 엘리멘트 생성
         const myP = document.createElement("p");
+        // 아이디 추가
+        myP.id ="myId"
+        // 클래스 추가
+        myP.classList.add("cls")
+        // Textnoed 생성        
         const mytxt = document.createTextNode("세번째")
-        const myAttr = document.createAttribute
+        // 엘리멘트에 지식추가(textnode)
         myP.appendChild(mytxt)
         
+        //div1의 지식으로 추가
         let div1 = document.getElementById("div1");
         div1.appendChild(myP);
 
