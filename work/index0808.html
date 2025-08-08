@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Bread {
+            constructor(source) {
+                this.source = source;
+            }
+            present() {
+                return `${this.source} 빵 드세요`
+            }
+        }
+
+
+
+        const bread1 = new Bread("팥");
+        const bread2 = new Bread("크림");
+        const bread3 = new Bread("슈크림");
+        const bread4 = new Bread("딸기잼");
+
+        const callBread1 = bread1.present();
+        const callBread2 = bread2.present();
+        const callBread3 = bread3.present();
+        const callBread4 = bread4.present();
+
+
+        class Car {
+            constructor(name) {
+                this.brand = name
+            }
+            present1() {
+                return `I have a ` + this.brand;
+            }
+
+        }
+        class Model extends Car {
+            constructor(name, mod) {
+                super(name);
+                this.model = mod;
+            }
+            show() {
+                return this.present1() + `, it is a ` + this.model
+            }
+        }
+            
+        const mycar = new Model("BMW", "X5");
+        document.write(mycar.show());
+    </script>
+
+
+</body>
+
+</html>
